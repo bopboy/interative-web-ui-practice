@@ -70,5 +70,36 @@ a {
     padding: 30px;
     box-sizing: border-box;
     opacity: 0.4;
-    transition: 1s;
+    transition: 0.5s;
+}
+.wrap .swiper-button-prev {
+    left: auto;
+    right: 100px;
+    top: auto;
+    bottom: 50px;
+    filter: grayscale(100%) brightness(3);
+    transform: scale(0.5);
+}
+.wrap .swiper-button-next {
+    left: auto;
+    right: 60px;
+    top: auto;
+    bottom: 50px;
+    filter: grayscale(100%) brightness(3);
+    transform: scale(0.5);
+}
+.swiper-pagination-fraction {
+    bottom: auto;
+    top: 50px;
+    left: auto;
+    right: 50px;
+    width: auto;
+    font-size: 16px;
+    font-family: "orbitron";
+    letter-spacing: 1px;
+    color: #eee;
+}
+.swiper-pagination-fraction span:nth-of-type(1) {
+    font-size: 30px;
+    color: #fff;
 }
