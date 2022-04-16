@@ -5,5 +5,8 @@ const len = lists.length - 1
 let i = 0
 
 for (let el of lists) {
-    el.style.transform = `rotate(${deg * i++}deg) translateY(-100vh)`
+    el.style.transform = `rotate(${deg * i}deg) translateY(-100vh)`
+    let pic = el.querySelector('.pic')
+    pic.style.backgroundImage = `url(./img/member${i + 1}.jpg)`
+    i++
 }
