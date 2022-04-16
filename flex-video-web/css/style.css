@@ -5,7 +5,7 @@
     margin:0 ;
     padding: 0;
 }
-ul, ol {
+ul, ol, li {
     list-style: none;
 }
 a {
@@ -29,14 +29,36 @@ main header {
     justify-content: center;
     position: relative;
     z-index: 3;
-    border: 10px solid pink;
+}
+main header h1 {
+    font-size:0px;
+    color: #fff;
+}
+main header h1 i {
+    font-size: 5vw;
+    margin-bottom: 15px;
+}
+main header h1 span {
+    font: normal 0.8vw/1 "arial";
+    color: #888;
+}
+main header address {
+    font: normal 11px/1.2 "arial";
+    color: #888;
 }
 main nav {
     position: absolute;
     top: 10vh;
     right: 5vw;
     z-index: 3;
-    border: 10px solid aqua;
+}
+main nav ul {
+    display: flex;
+}
+main nav ul li a {
+    font-size: 18px;
+    color: #bbb;
+    margin-right: 30px;
 }
 main section {
     position: relative;
@@ -45,5 +67,56 @@ main section {
     display: flex;
     padding-top: 140px;
     z-index: 1;
-    border: 10px solid yellow;
+}
+main section article {
+    position: relative;
+    flex: 1;
+    padding: 70px 40px 100px;
+    opacity: 0.6;
+    transition: flex 1s, opacity 1s;
+    z-index: 1;
+    cursor: pointer;
+}
+main section article::before {
+    content: "";
+    display: block;
+    height: 95%;
+    background: #444;
+    position: absolute;
+    top: 0px;
+    left: -200px;
+    opacity: 0;
+    transition: 1s;
+}
+main section article .inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    position: relative;
+}
+main section article .inner .txt {
+    width: 100%;
+    transition: 0.5s;
+}
+main section article .inner .txt h2 {
+    font: normal 2vw/1 "Alegreya Sans SC";
+    color: #fff;
+    margin-bottom: 40px;
+    padding-top: 70px;
+    transition: 1s;
+}
+main section article .inner .txt h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #777;
+    margin-top: 20px;
+    transition: 1.5s;
+}
+main section article .inner .txt p {
+    font: 14px/1.4 "arial";
+    color: #999;
 }
